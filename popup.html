@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="main-view" class="view hidden">
+    <div class="header">
+      <span id="user-display"></span>
+      <button id="settings-btn" class="icon-btn" title="Settings">⚙️</button>
+    </div>
+    
+    <div class="duo-card">
+      <div id="flame-container" class="inactive">
+        <img id="flame-img" src="icon.png" alt="Fire" />
+      </div>
+      <h1 id="streak-val">0</h1>
+      <span class="label">Day Streak</span>
+    </div>
+
+    <div class="stats-row">
+      <div class="stat-box">
+        <span class="stat-title">Max Streak</span>
+        <span class="stat-value" id="longest-streak">0</span>
+      </div>
+      <div class="stat-box">
+        <span class="stat-title">Status</span>
+        <span class="stat-value" id="status-bar">Loading...</span>
+      </div>
+    </div>
+  </div>
+
+  <div id="settings-view" class="view">
+    <h2 class="title">Gitstreak</h2>
+    
+    <div class="duo-card settings-card">
+      <label>GitHub Username</label>
+      <input type="text" id="username" placeholder="e.g. torvalds">
+      
+      <label>Personal Access Token (Optional)</label>
+      <input type="password" id="pat" placeholder="For private repos">
+      
+      <div class="checkbox-wrapper">
+        <input type="checkbox" id="notify-toggle">
+        <label for="notify-toggle">Reminder at 8:00 PM</label>
+      </div>
+    </div>
+    
+    <button id="save-btn" class="btn-primary">Save Config</button>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
